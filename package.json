@@ -1,0 +1,26 @@
+{
+  "name": "goit-nodejs-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexkorpol/goit-nodejs-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexkorpol/goit-nodejs-cli/issues"
+  },
+  "homepage": "https://github.com/alexkorpol/goit-nodejs-cli#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "joi": "^17.9.2",
+    "yargs": "^17.7.2"
+  }
+}
