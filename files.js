@@ -11,7 +11,6 @@ const createFile = async (fileName, content) => {
     content,
   };
   const data = dataValidator(file);
-  // console.log(data.error.details[0]);
   if (data.error) {
     console.log(
       chalk.red(`Please specify ${data.error.details[0].path[0]} parameter`)
@@ -35,7 +34,7 @@ const createFile = async (fileName, content) => {
 
 const getFiles = async () => {
   const pathFolder = path.join(__dirname, "./files");
-  const arrayFiles = await fs.readdir(pathFolder);
+  const arrayFiles = await readdir(pathFolder);
   if (!arrayFiles.length) {
     console.log(chalk.red(`this folder is empty`));
     return;
@@ -54,6 +53,20 @@ const getInfo = async (fileName) => {
   const pathFile = path.join(__dirname, "./files", fileName);
   const text = await fs.readFile(pathFile, "utf-8");
   console.log(text);
+
+  const ext = path.extname(fileName);
+  console.log(ext);
+
+  const base = path.basename(fileName, ext);
+  console.log(base);
+
+  const object = {
+    name: base,
+    extention: ext,
+    content: text,
+  };
+
+  console.log(object);
 };
 
 module.exports = {
