@@ -6,6 +6,3 @@ const checkExtention = (fileName) => {
 };
 
 module.exports = checkExtention;
-
-// fileName = index.html;
-// re
